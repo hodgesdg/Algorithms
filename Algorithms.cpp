@@ -2,11 +2,20 @@
 //
 
 #include <iostream>
+#include <algorithm>
+#include "algorithms.h"
+#include <vector>
 using namespace std;
 
 int main()
 {
     std::cout << "Hello World!\n";
+    vector<int>arr = { 42, 7, 15, 89, 23, 4, 67, 12, 56, 90,
+                   3, 18, 34, 76, 27, 11, 63, 8, 99, 51,
+                   30, 2, 70, 45, 19 };
+    sort(begin(arr),end(arr));
+    int pos = binarysearch(34,arr);
+    std::cout << pos;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
